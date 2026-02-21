@@ -1,3 +1,16 @@
+<div>
+  <ul>
+    @for (ticket of tickets; track ticket.id) {
+      <!-- @for mette a disposizione $first, $last, $even, $odd, $count -->
+      <li>
+        <app-ticket [ticket]="ticket" (markAsCompleted)="onCompleteTicket(ticket.id)" />
+      </li>
+    } @empty {
+      No tickets available.
+    }
+  </ul>
+</div>
+
 <div id="new-ticket">
-  <app-new-ticket />
+  <app-new-ticket (addTicket)="onAddTicket($event)" />
 </div>
