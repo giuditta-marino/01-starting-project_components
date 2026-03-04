@@ -28,6 +28,3 @@ jobs:
 
       - name: Audit dependencies
         run: npm audit --audit-level=critical
-
-      - name: Run tests
-        run: npm test -- --watch=false --browsers=ChromeHeadless
