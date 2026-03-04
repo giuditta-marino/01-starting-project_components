@@ -28,3 +28,6 @@ jobs:
 
       - name: Audit dependencies
         run: npm audit --audit-level=critical
+
+      - name: Build project
+        run: npm run build -- --configuration production
