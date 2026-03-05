@@ -11,8 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './new-ticket.component.css'
 })
 export class NewTicketComponent implements AfterViewInit {
-  @ViewCild('form') form?: ElementRef<HTMLFormElement>;
-  //prova
+  @ViewChild('form') form?: ElementRef<HTMLFormElement>;
   //@Output() addTicket = new EventEmitter<{title: string, request: string}>();
   //private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
   addTicket = output<{title: string, request: string}>();
